@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(208, 182, 233);
+}
+
+h2 {
+    text-align: center;
+}
+
+.main-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0px 45%;
+    gap: 10px;
+  }
+
+footer {
+    background-color: #383838;
+    color: white;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+.day-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+}
