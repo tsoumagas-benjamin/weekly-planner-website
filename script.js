@@ -124,4 +124,16 @@ saturdayPlanner.addEventListener('click', (div) => {
     }
 });
 
+// Function to remove all events from planner
+function resetWeek() {
+    const hourBlocks = document.getElementsByClassName('hour-block');
+    for (const hourBlock of hourBlocks) {
+        hourBlock.innerHTML = "";
+    }
+}
+
+weeklyReset.addEventListener('click', (button) =>{
+    resetWeek();
+});
+
 hourCheck();
