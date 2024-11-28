@@ -1,5 +1,6 @@
 body {
-  background-image: url(https://img.freepik.com/free-photo/decorative-dreamy-arrangement-with-dried-flowers_23-2151363230.jpg?t=st=1732759923~exp=1732763523~hmac=c24679ea7549ef5b9b0211bbe46dba03971166b0535e7494b4e7babdd248708c&w=740);
+  background-image: url(https://cdn.pixabay.com/photo/2023/08/29/18/01/rainbow-8221835_960_720.jpg);
+  background-size: cover;
 }
 
 h1 {
@@ -55,13 +56,14 @@ footer {
 
 /* Media Queries for Mobile Devices */
 @media only screen and (max-width: 600px) {
-  footer {
-    padding: 10px;
+  
+  body {
+    background-size: auto;
   }
 
   .day-grid {
     display: grid;
-    grid-template-rows: repeat(7, minmax(0, 1fr));
+    grid-template-columns: 1fr;
   }
 
   .day-header {
@@ -69,5 +71,9 @@ footer {
     flex-direction: row;
     align-items: center;
     gap: 10px;
+  }
+
+  footer {
+    padding: 10px;
   }
 }
