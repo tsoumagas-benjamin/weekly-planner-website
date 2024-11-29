@@ -294,5 +294,6 @@ document.addEventListener('DOMContentLoaded', loadSundayPlan);
   
 // Function to display the sign-up form
 function displaySignup() {
+    document.getElementById("signup").style.display = 'none';
     document.getElementById("signupForm").style.display = 'block';
 }
