@@ -225,4 +225,33 @@ saturdayClear.addEventListener('click', (button) =>{
     clearSaturday();
 });
 
+// Functions to allow users to visit detailed day views on button press
+function seeSunday() {
+    window.location.href = "sunday.html";
+}
+
+function seeMonday() {
+    window.location.href = "monday.html";
+}
+
+function seeTuesday() {
+    window.location.href = "tuesday.html";
+}
+
+function seeWednesday() {
+    window.location.href = "wednesday.html";
+}
+
+function seeThursday() {
+    window.location.href = "thursday.html";
+}
+
+function seeFriday() {
+    window.location.href = "friday.html";
+}
+
+function seeSaturday() {
+    window.location.href = "saturday.html";
+}
+
 hourCheck();
