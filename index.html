@@ -265,24 +265,24 @@
       </div>
     </section>
 
-<button onclick="displaySignup()">Register</button>
+<button class="signup" onclick="displaySignup()">Register</button>
     <div class="box-outer" id="signupForm" style="display:none;">
       <form name="signup_form" method="post" action="" autocomplete="off">
         <h2 class="heading">Sign Up Form</h2>
+        <div class="form-grid">
+          <label>First Name</label>
+          <input type="text" name="first_name" class="input-control" placeholder="Your first name">
 
-        <label>First Name</label>
-        <input type="text" name="first_name" class="input-control" placeholder="Your first name">
+          <label>Last Name</label>
+          <input type="text" name="last_name" class="input-control" placeholder="Your last name">
 
-        <label>Last Name</label>
-        <input type="text" name="last_name" class="input-control" placeholder="Your last name">
+          <label>Email</label>
+          <input type="text" name="email" class="input-control" placeholder="Your email address">
 
-        <label>Email</label>
-        <input type="text" name="email" class="input-control" placeholder="Your email address">
-
-        <label>New Password</label>
-        <input type="password" name="password" class="input-control">
-
-        <input type="submit" name="submit" class="button" value="Signup Now For FREE">
+          <label>New Password</label>
+          <input type="password" name="password" class="input-control">
+        </div>
+        <input type="submit" name="submit" class="submit-form" value="Signup Now For FREE">
       </form>
       <hr>
       <p>By clicking Sign Up, you are indicating that you are aware that your information will be stored for log-in purposes.</p>
