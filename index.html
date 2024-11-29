@@ -13,6 +13,7 @@
       <h1>Your Weekly Plan</h1>
       <div class="main-buttons">
         <button class="save-plan" id="save-plan" type="button">
+          <!-- Implement a way to save the plan as a visual format -->
           Save Plan
         </button>
         <button class="weekly-reset" id="weekly-reset" type="button">
@@ -26,11 +27,8 @@
         <div class="day-item">
           <!-- Sunday -->
           <div class="day-header" id="day-header">
-            <!-- Implement Sunday Page -->
             <h4>Sunday</h4>
-            <button class="day-button" id="sunday-button" onclick="seeSunday()">
-              More Details
-            </button>
+            <button class="day-button" id="sunday-button" onclick="seeSunday()">More Details</button>
             <button class="clear" id="clear-sunday" type="button">Clear</button>
           </div>
           <div class="planner" id="sunday-planner">
@@ -63,11 +61,8 @@
         <div class="day-item">
           <!-- Monday -->
           <div class="day-header" id="day-header">
-            <!-- Implement Monday Page -->
             <h4>Monday</h4>
-            <button class="day-button" id="monday-button" onclick="seeMonday()">
-              More Details
-            </button>
+            <button class="day-button" id="monday-button" onclick="seeMonday()">More Details</button>
             <button class="clear" id="clear-monday" type="button">Clear</button>
           </div>
           <div class="planner" id="monday-planner">
@@ -100,18 +95,9 @@
         <div class="day-item">
           <!-- Tuesday -->
           <div class="day-header" id="day-header">
-            <!-- Implement Tuesday Page -->
             <h4>Tuesday</h4>
-            <button
-              class="day-button"
-              id="tuesday-button"
-              onclick="seeTuesday()"
-            >
-              More Details
-            </button>
-            <button class="clear" id="clear-tuesday" type="button">
-              Clear
-            </button>
+            <button class="day-button" id="tuesday-button" onclick="seeTuesday()">More Details</button>
+            <button class="clear" id="clear-tuesday" type="button">Clear</button>
           </div>
           <div class="planner" id="tuesday-planner">
             <div class="hour-block" id="tuesday-0"></div>
@@ -143,18 +129,9 @@
         <div class="day-item">
           <!-- Wednesday -->
           <div class="day-header" id="day-header">
-            <!-- Implement Wednesday Page -->
             <h4>Wednesday</h4>
-            <button
-              class="day-button"
-              id="wednesday-button"
-              onclick="seeWednesday()"
-            >
-              More Details
-            </button>
-            <button class="clear" id="clear-wednesday" type="button">
-              Clear
-            </button>
+            <button class="day-button" id="wednesday-button" onclick="seeWednesday()">More Details</button>
+            <button class="clear" id="clear-wednesday" type="button">Clear</button>
           </div>
           <div class="planner" id="wednesday-planner">
             <div class="hour-block" id="wednesday-0"></div>
@@ -186,18 +163,9 @@
         <div class="day-item">
           <!-- Thursday -->
           <div class="day-header" id="day-header">
-            <!-- Implement Thursday Page -->
             <h4>Thursday</h4>
-            <button
-              class="day-button"
-              id="sunday-button"
-              onclick="seeThursday()"
-            >
-              More Details
-            </button>
-            <button class="clear" id="clear-thursday" type="button">
-              Clear
-            </button>
+            <button class="day-button" id="thursday-button" onclick="seeThursday()">More Details</button>
+            <button class="clear" id="clear-thursday" type="button">Clear</button>
           </div>
           <div class="planner" id="thursday-planner">
             <div class="hour-block" id="thursday-0"></div>
@@ -229,11 +197,8 @@
         <div class="day-item">
           <!-- Friday -->
           <div class="day-header" id="day-header">
-            <!-- Implement Friday Page -->
             <h4>Friday</h4>
-            <button class="day-button" id="friday-button" onclick="seeFriday()">
-              More Details
-            </button>
+            <button class="day-button" id="friday-button" onclick="seeFriday()">More Details</button>
             <button class="clear" id="clear-friday" type="button">Clear</button>
           </div>
           <div class="planner" id="friday-planner">
@@ -266,18 +231,9 @@
         <div class="day-item">
           <!-- Saturday -->
           <div class="day-header" id="day-header">
-            <!-- Implement Saturday Page -->
             <h4>Saturday</h4>
-            <button
-              class="day-button"
-              id="saturday-button"
-              onclick="seeSaturday()"
-            >
-              More Details
-            </button>
-            <button class="clear" id="clear-saturday" type="button">
-              Clear
-            </button>
+            <button class="day-button" id="saturday-button" onclick="seeSaturday()">More Details</button>
+            <button class="clear" id="clear-saturday" type="button">Clear</button>
           </div>
           <div class="planner" id="saturday-planner">
             <div class="hour-block" id="saturday-0"></div>
@@ -309,9 +265,9 @@
       </div>
     </section>
 
-<button onclick="document.getElementById('signupForm').style.display='block';">Register</button>" 
-      <div class="box-outer" id="signupForm" style="display:none;">
-    <form name="signup_form" method="post" action="" autocomplete="off">
+<button onclick="displaySignup()">Register</button>
+    <div class="box-outer" id="signupForm" style="display:none;">
+      <form name="signup_form" method="post" action="" autocomplete="off">
         <h2 class="heading">Sign Up Form</h2>
 
         <label>First Name</label>
@@ -327,17 +283,12 @@
         <input type="password" name="password" class="input-control">
 
         <input type="submit" name="submit" class="button" value="Signup Now For FREE">
-    </form>
-    <hr>
-    <div>By clicking Sign Up, you are indicating that you have read and agree to the <a href="#" target="_blank"><u>Terms of Use</u></a> and <a href="#" target="_blank"><u>Privacy Policy</u></a>.</div>
-
-</div>
-
-
-
+      </form>
+      <hr>
+      <p>By clicking Sign Up, you are indicating that you are aware that your information will be stored for log-in purposes.</p>
       </div>
-<br><br><br>
-
+    </div>
+    <br><br><br>
 
     <!-- Footer Section -->
     <footer>

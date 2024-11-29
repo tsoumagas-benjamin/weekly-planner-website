@@ -260,7 +260,6 @@ function seeSaturday() {
 hourCheck();
 
 // Function to allow return to weekly calendar from individual days
-
 function seeWeeklyPlanner() {
     window.location.href = "index.html";
 }
@@ -277,7 +276,6 @@ function saveSundayPlan() {
 }
 
 // Function to load plan from localStorage
-
 function loadSundayPlan() {
     const savedSundayPlan = localStorage.getItem('sundayPlan');
     if (savedSundayPlan) {
@@ -289,11 +287,19 @@ function loadSundayPlan() {
         }
     }
 }
+
 // Event listener for Save Plan button
 const savePlanButton = document.getElementById("save-plan");
 
 savePlanButton.addEventListener('click', () => {
     saveSundayPlan();
 });
+
 // Loads plan from localStorage when page loads
 document.addEventListener('DOMContentLoaded', loadSundayPlan);
+=======
+  
+// Function to display the sign-up form
+function displaySignup() {
+    document.getElementById("signupForm").style.display = 'block';
+}
