@@ -76,50 +76,99 @@ function hourCheck() {
 // Prompt user for event details when clicking the planner
 sundayPlanner.addEventListener('click', (div) => {
     if(div.target.id != "sunday-planner"){
-        let event = prompt("What event would you like to add here?");
-        div.target.innerHTML = event;
+        if(div.target.innerHTML === null || div.target.innerHTML === "" || div.target.innerHTML === "Free Time") {
+            let event = prompt("What event would you like to add here?");
+            div.target.innerHTML = event;
+        } else {
+            let deletion = prompt(`Are you sure you want to delete ${div.target.innerHTML}?`, "Yes");
+            if (deletion === "Yes" || deletion === "yes" || deletion === "y"){
+                div.target.innerHTML = null;
+            }
+        }
     }
 });
 
 mondayPlanner.addEventListener('click', (div) => {
     if(div.target.id != "monday-planner"){
-        let event = prompt("What event would you like to add here?");
-        div.target.innerHTML = event;
+        if(div.target.innerHTML === null || div.target.innerHTML === "" || div.target.innerHTML === "Free Time") {
+            let event = prompt("What event would you like to add here?");
+            div.target.innerHTML = event;
+        } else {
+            let deletion = prompt(`Are you sure you want to delete ${div.target.innerHTML}?`, "Yes");
+            if (deletion === "Yes" || deletion === "yes" || deletion === "y"){
+                div.target.innerHTML = null;
+            }
+        }
     }
 });
 
 tuesdayPlanner.addEventListener('click', (div) => {
     if(div.target.id != "tuesday-planner"){
-        let event = prompt("What event would you like to add here?");
-        div.target.innerHTML = event;
+        if(div.target.innerHTML === null || div.target.innerHTML === "" || div.target.innerHTML === "Free Time") {
+            let event = prompt("What event would you like to add here?");
+            div.target.innerHTML = event;
+        } else {
+            let deletion = prompt(`Are you sure you want to delete ${div.target.innerHTML}?`, "Yes");
+            if (deletion === "Yes" || deletion === "yes" || deletion === "y"){
+                div.target.innerHTML = null;
+            }
+        }
     }
 });
 
 wednesdayPlanner.addEventListener('click', (div) => {
     if(div.target.id != "wednesday-planner"){
-        let event = prompt("What event would you like to add here?");
-        div.target.innerHTML = event;
+        if(div.target.innerHTML === null || div.target.innerHTML === "" || div.target.innerHTML === "Free Time") {
+            let event = prompt("What event would you like to add here?");
+            div.target.innerHTML = event;
+        } else {
+            let deletion = prompt(`Are you sure you want to delete ${div.target.innerHTML}?`, "Yes");
+            if (deletion === "Yes" || deletion === "yes" || deletion === "y"){
+                div.target.innerHTML = null;
+            }
+        }
     }
 });
 
 thursdayPlanner.addEventListener('click', (div) => {
     if(div.target.id != "thursday-planner"){
-        let event = prompt("What event would you like to add here?");
-        div.target.innerHTML = event;
+        if(div.target.innerHTML === null || div.target.innerHTML === "" || div.target.innerHTML === "Free Time") {
+            let event = prompt("What event would you like to add here?");
+            div.target.innerHTML = event;
+        } else {
+            let deletion = prompt(`Are you sure you want to delete ${div.target.innerHTML}?`, "Yes");
+            if (deletion === "Yes" || deletion === "yes" || deletion === "y"){
+                div.target.innerHTML = null;
+            }
+        }
     }
 });
 
 fridayPlanner.addEventListener('click', (div) => {
     if(div.target.id != "friday-planner"){
-        let event = prompt("What event would you like to add here?");
-        div.target.innerHTML = event;
+        if(div.target.innerHTML === null || div.target.innerHTML === "" || div.target.innerHTML === "Free Time") {
+            let event = prompt("What event would you like to add here?");
+            div.target.innerHTML = event;
+        } else {
+            let deletion = prompt(`Are you sure you want to delete ${div.target.innerHTML}?`, "Yes");
+            if (deletion === "Yes" || deletion === "yes" || deletion === "y"){
+                div.target.innerHTML = null;
+            }
+        }
     }
 });
 
 saturdayPlanner.addEventListener('click', (div) => {
     if(div.target.id != "saturday-planner"){
-        let event = prompt("What event would you like to add here?");
-        div.target.innerHTML = event;
+        if(div.target.innerHTML === null || div.target.innerHTML === "" || div.target.innerHTML === "Free Time") {
+            let event = prompt("What event would you like to add here?");
+            div.target.innerHTML = event;
+        } else {
+            let deletion = prompt(`Are you sure you want to delete ${div.target.innerHTML}?`, "Yes");
+            if (deletion === "Yes" || deletion === "yes" || deletion === "y"){
+                div.target.innerHTML = null;
+            }
+        }
     }
 });
 
