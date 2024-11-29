@@ -58,20 +58,20 @@ function timestamp() {
             break;
     }
     blockID += hour;
-    let div = document.getElementById(blockID);
+    localStorage.clear();
     // Remove highlighting on any previous highlighted div if it exists
-    if(localStorage.getItem("currentDiv")) {
-        let currentDiv = localStorage.getItem("currentDiv")
+    if(localStorage.getItem("currentDiv") != null) {
+        let currentDiv = localStorage.getItem("currentDiv");
         document.getElementById(currentDiv).style.backgroundColor = '#E16FFD';
     }
     // Select div for the current day and hour and highlight it
-    localStorage.setItem("currentDiv", div);
-    document.getElementById(div).style.backgroundColor = '#FFDA47';
+    localStorage.setItem("currentDiv", blockID);
+    document.getElementById(blockID).style.backgroundColor = '#FFDA47';
 }
 
-// Function to query the day and hour every 15 minutes
+// Function to query the day and hour every minute
 function hourCheck() {
-    setInterval(timestamp, 1000 * 60 * 15);
+    setInterval(timestamp, 1000 * 60);
 }
 
 // Prompt user for event details when clicking the planner
@@ -135,11 +135,6 @@ function resetWeek() {
 weeklyReset.addEventListener('click', (button) =>{
     resetWeek();
 });
-
-// TODO: Function to save weekly plan as a download for the user
-// function downloadPlan(){
-
-// }
 
 // Function to remove all events from Sunday
 function clearSunday() {
@@ -257,7 +252,7 @@ function seeSaturday() {
     window.location.href = "saturday.html";
 }
 
-hourCheck();
+document.addEventListener("DOMContentLoaded", hourCheck);
 
 // Function to allow return to weekly calendar from individual days
 function seeWeeklyPlanner() {
