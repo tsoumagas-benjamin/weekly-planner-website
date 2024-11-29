@@ -147,7 +147,10 @@ function clearSunday() {
     for (const sundayBlock of sundayBlocks) {
         sundayBlock.innerHTML = "";
     }
+    localStorage.removeItem('sundayPlan');
 }
+
+const sundayClearButton = document.getElementById("clear-sunday");
 
 sundayClear.addEventListener('click', (button) =>{
     clearSunday();
@@ -261,3 +264,36 @@ hourCheck();
 function seeWeeklyPlanner() {
     window.location.href = "index.html";
 }
+
+// Function to save plan to localStorage
+function saveSundayPlan() {
+    let sundayPlan = {};
+
+    for (let i = 0; i < 24; i++) {
+        const block = document.getElementById(`sunday-${i}`);
+        sundayPlan[`hour-${i}`] = block.innerHTML || '';
+    }
+    localStorage.setItem('sundayPlan', JSON.stringify(sundayPlan));
+}
+
+// Function to load plan from localStorage
+
+function loadSundayPlan() {
+    const savedSundayPlan = localStorage.getItem('sundayPlan');
+    if (savedSundayPlan) {
+        const sundayPlan = JSON.parse(savedSundayPlan);
+
+        for (let i = 0; i < 24; i++) {
+            const block = document.getElementById(`sunday-${i}`);
+            block.innerHTML = sundayPlan[`hour-${i}`] || 'Free Time';
+        }
+    }
+}
+// Event listener for Save Plan button
+const savePlanButton = document.getElementById("save-plan");
+
+savePlanButton.addEventListener('click', () => {
+    saveSundayPlan();
+});
+// Loads plan from localStorage when page loads
+document.addEventListener('DOMContentLoaded', loadSundayPlan);
