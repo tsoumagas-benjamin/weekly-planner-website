@@ -257,7 +257,11 @@ function seeSaturday() {
 hourCheck();
 
 // Function to allow return to weekly calendar from individual days
-
 function seeWeeklyPlanner() {
     window.location.href = "index.html";
+}
+
+// Function to display the sign-up form
+function displaySignup() {
+    document.getElementById("signupForm").style.display = 'block';
 }
