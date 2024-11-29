@@ -58,20 +58,19 @@ function timestamp() {
             break;
     }
     blockID += hour;
-    let div = document.getElementById(blockID);
     // Remove highlighting on any previous highlighted div if it exists
-    if(localStorage.getItem("currentDiv")) {
-        let currentDiv = localStorage.getItem("currentDiv")
+    if(localStorage.getItem("currentDiv") != null) {
+        let currentDiv = localStorage.getItem("currentDiv");
         document.getElementById(currentDiv).style.backgroundColor = '#E16FFD';
     }
     // Select div for the current day and hour and highlight it
-    localStorage.setItem("currentDiv", div);
-    document.getElementById(div).style.backgroundColor = '#FFDA47';
+    localStorage.setItem("currentDiv", blockID);
+    document.getElementById(blockID).style.backgroundColor = '#FFDA47';
 }
 
-// Function to query the day and hour every 15 minutes
+// Function to query the day and hour every minute
 function hourCheck() {
-    setInterval(timestamp, 1000 * 60 * 15);
+    setInterval(timestamp, 1000 * 60);
 }
 
 // Prompt user for event details when clicking the planner
@@ -136,18 +135,16 @@ weeklyReset.addEventListener('click', (button) =>{
     resetWeek();
 });
 
-// TODO: Function to save weekly plan as a download for the user
-// function downloadPlan(){
-
-// }
-
 // Function to remove all events from Sunday
 function clearSunday() {
     const sundayBlocks = sundayPlanner.querySelectorAll('[id^="sunday"],[id$="[0-9]"]');
     for (const sundayBlock of sundayBlocks) {
         sundayBlock.innerHTML = "";
     }
+    localStorage.removeItem('sundayPlan');
 }
+
+const sundayClearButton = document.getElementById("clear-sunday");
 
 sundayClear.addEventListener('click', (button) =>{
     clearSunday();
@@ -254,14 +251,49 @@ function seeSaturday() {
     window.location.href = "saturday.html";
 }
 
-hourCheck();
+document.addEventListener("DOMContentLoaded", hourCheck);
 
 // Function to allow return to weekly calendar from individual days
 function seeWeeklyPlanner() {
     window.location.href = "index.html";
 }
 
+// Function to save plan to localStorage
+function saveSundayPlan() {
+    let sundayPlan = {};
+
+    for (let i = 0; i < 24; i++) {
+        const block = document.getElementById(`sunday-${i}`);
+        sundayPlan[`hour-${i}`] = block.innerHTML || '';
+    }
+    localStorage.setItem('sundayPlan', JSON.stringify(sundayPlan));
+}
+
+// Function to load plan from localStorage
+function loadSundayPlan() {
+    const savedSundayPlan = localStorage.getItem('sundayPlan');
+    if (savedSundayPlan) {
+        const sundayPlan = JSON.parse(savedSundayPlan);
+
+        for (let i = 0; i < 24; i++) {
+            const block = document.getElementById(`sunday-${i}`);
+            block.innerHTML = sundayPlan[`hour-${i}`] || 'Free Time';
+        }
+    }
+}
+
+// Event listener for Save Plan button
+const savePlanButton = document.getElementById("save-plan");
+
+savePlanButton.addEventListener('click', () => {
+    saveSundayPlan();
+});
+
+// Loads plan from localStorage when page loads
+document.addEventListener('DOMContentLoaded', loadSundayPlan);
+  
 // Function to display the sign-up form
 function displaySignup() {
+    document.getElementById("signup").style.display = 'none';
     document.getElementById("signupForm").style.display = 'block';
 }
