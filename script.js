@@ -58,7 +58,6 @@ function timestamp() {
             break;
     }
     blockID += hour;
-    localStorage.clear();
     // Remove highlighting on any previous highlighted div if it exists
     if(localStorage.getItem("currentDiv") != null) {
         let currentDiv = localStorage.getItem("currentDiv");
