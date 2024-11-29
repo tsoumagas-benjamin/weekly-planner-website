@@ -136,4 +136,93 @@ weeklyReset.addEventListener('click', (button) =>{
     resetWeek();
 });
 
+// TODO: Function to save weekly plan as a download for the user
+// function downloadPlan(){
+
+// }
+
+// Function to remove all events from Sunday
+function clearSunday() {
+    const sundayBlocks = sundayPlanner.querySelectorAll('[id^="sunday"],[id$="[0-9]"]');
+    for (const sundayBlock of sundayBlocks) {
+        sundayBlock.innerHTML = "";
+    }
+}
+
+sundayClear.addEventListener('click', (button) =>{
+    clearSunday();
+});
+
+// Function to remove all events from Monday
+function clearMonday() {
+    const mondayBlocks = mondayPlanner.querySelectorAll('[id^="monday"],[id$="[0-9]"]');
+    for (const mondayBlock of mondayBlocks) {
+        mondayBlock.innerText = "";
+    }
+}
+
+mondayClear.addEventListener('click', (button) =>{
+    clearMonday();
+});
+
+// Function to remove all events from Tuesday
+function clearTuesday() {
+    const tuesdayBlocks = tuesdayPlanner.querySelectorAll('[id^="tuesday"],[id$="[0-9]"]');
+    for (const tuesdayBlock of tuesdayBlocks) {
+        tuesdayBlock.innerHTML = "";
+    }
+}
+
+tuesdayClear.addEventListener('click', (button) =>{
+    clearTuesday();
+});
+
+// Function to remove all events from Wednesday
+function clearWednesday() {
+    const wednesdayBlocks = wednesdayPlanner.querySelectorAll('[id^="wednesday"],[id$="[0-9]"]');
+    for (const wednesdayBlock of wednesdayBlocks) {
+        wednesdayBlock.innerHTML = "";
+    }
+}
+
+wednesdayClear.addEventListener('click', (button) =>{
+    clearWednesday();
+});
+
+// Function to remove all events from Thursday
+function clearThursday() {
+    const thursdayBlocks = thursdayPlanner.querySelectorAll('[id^="thursday"],[id$="[0-9]"]');
+    for (const thursdayBlock of thursdayBlocks) {
+        thursdayBlock.innerHTML = "";
+    }
+}
+
+thursdayClear.addEventListener('click', (button) =>{
+    clearThursday();
+});
+
+// Function to remove all events from Friday
+function clearFriday() {
+    const fridayBlocks = fridayPlanner.querySelectorAll('[id^="friday"],[id$="[0-9]"]');
+    for (const fridayBlock of fridayBlocks) {
+        fridayBlock.innerHTML = "";
+    }
+}
+
+fridayClear.addEventListener('click', (button) =>{
+    clearFriday();
+});
+
+// Function to remove all events from Saturday
+function clearSaturday() {
+    const saturdayBlocks = saturdayPlanner.querySelectorAll('[id^="saturday"],[id$="[0-9]"]');
+    for (const saturdayBlock of saturdayBlocks) {
+        saturdayBlock.innerHTML = "";
+    }
+}
+
+saturdayClear.addEventListener('click', (button) =>{
+    clearSaturday();
+});
+
 hourCheck();
