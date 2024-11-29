@@ -255,3 +255,9 @@ function seeSaturday() {
 }
 
 hourCheck();
+
+// Function to allow return to weekly calendar from individual days
+
+function seeWeeklyPlanner() {
+    window.location.href = "index.html";
+}

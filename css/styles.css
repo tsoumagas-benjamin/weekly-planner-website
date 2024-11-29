@@ -10,6 +10,14 @@ h1 {
   font-weight: 700;
 }
 
+.content {
+background-color: rgba(43, 43, 43, 0.669);
+color: aliceblue;
+padding: 5px;
+border-radius: 8px;
+text-align: center;
+}
+
 .main-buttons {
   display: flex;
   flex-direction: column;
