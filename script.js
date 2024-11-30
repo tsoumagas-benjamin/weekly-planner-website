@@ -291,6 +291,7 @@ savePlanButton.addEventListener('click', () => {
 
 // Loads plan from localStorage when page loads
 document.addEventListener('DOMContentLoaded', loadSundayPlan);
+
   
 // Function to display the sign-up form
 function displaySignup() {
