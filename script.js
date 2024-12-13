@@ -61,7 +61,7 @@ function timestamp() {
     // Remove highlighting on any previous highlighted div if it exists
     if(localStorage.getItem("currentDiv") != null) {
         let currentDiv = localStorage.getItem("currentDiv");
-        document.getElementById(currentDiv).style.backgroundColor = '#E16FFD';
+        document.getElementById(currentDiv).style.backgroundColor = '#32CFFF';
     }
     // Select div for the current day and hour and highlight it
     localStorage.setItem("currentDiv", blockID);
