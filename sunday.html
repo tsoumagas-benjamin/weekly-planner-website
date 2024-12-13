@@ -87,7 +87,7 @@
             // Loop through 24 hours and update the hour blocks
             for (let i = 0; i < 24; i++) {
                 const block = document.getElementById(`sunday-${i}`);
-                block.innerHTML = sundayPlan[`hour-${i}`] || 'Free Time'; // Use saved data or default to 'Free Time'
+                block.innerHTML = sundayPlan[`hour-${i}`] || 'Free Time'; 
             }
         }
     }
@@ -95,8 +95,6 @@
     // Call this function to load the plan when the page is ready
     document.addEventListener('DOMContentLoaded', loadSundayPlan);
 
-
-    
     </script>
 
 
