@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Friday</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     
@@ -20,7 +21,82 @@
     <p> To-do list, events, tasks, etc.</p>
 </div>
 
+          <!-- Friday -->
+          <div class="day-header" id="day-header">
+          </div>
+          <div class="planner" id="friday-planner">
+            <label class="time">12 am</label>
+            <div class="hour-block" id="friday-0"></div>
+            <label class="time">1 am</label>
+            <div class="hour-block" id="friday-1"></div>
+            <label class="time">2 am</label>
+            <div class="hour-block" id="friday-2"></div>
+            <label class="time">3 am</label>
+            <div class="hour-block" id="friday-3"></div>
+            <label class="time">4 am</label>
+            <div class="hour-block" id="friday-4"></div>
+            <label class="time">5 am</label>
+            <div class="hour-block" id="friday-5"></div>
+            <label class="time">6 am</label>
+            <div class="hour-block" id="friday-6"></div>
+            <label class="time">7 am</label>
+            <div class="hour-block" id="friday-7"></div>
+            <label class="time">8 am</label>
+            <div class="hour-block" id="friday-8"></div>
+            <label class="time">9 am</label>
+            <div class="hour-block" id="friday-9"></div>
+            <label class="time">10 am</label>
+            <div class="hour-block" id="friday-10"></div>
+            <label class="time">11 am</label>
+            <div class="hour-block" id="friday-11"></div>
+            <label class="time">12 pm</label>
+            <div class="hour-block" id="friday-12"></div>
+            <label class="time">1 pm</label>
+            <div class="hour-block" id="friday-13"></div>
+            <label class="time">2 pm</label>
+            <div class="hour-block" id="friday-14"></div>
+            <label class="time">3 pm</label>
+            <div class="hour-block" id="friday-15"></div>
+            <label class="time">4 pm</label>
+            <div class="hour-block" id="friday-16"></div>
+            <label class="time">5 pm</label>
+            <div class="hour-block" id="friday-17"></div>
+            <label class="time">6 pm</label>
+            <div class="hour-block" id="friday-18"></div>
+            <label class="time">7 pm</label>
+            <div class="hour-block" id="friday-19"></div>
+            <label class="time">8 pm</label>
+            <div class="hour-block" id="friday-20"></div>
+            <label class="time">9 pm</label>
+            <div class="hour-block" id="friday-21"></div>
+            <label class="time">10 pm</label>
+            <div class="hour-block" id="friday-22"></div>
+            <label class="time">11 pm</label>
+            <div class="hour-block" id="friday-23"></div>
+          </div>
+        </div>
+        <div class="day-item">
 
-    <script src="script.js"></script>
+            <script>
+
+                // Function to load plan from localStorage
+function loadFridayPlan() {
+    const savedFridayPlan = localStorage.getItem('fridayPlan');
+    if (savedFridayPlan) {
+        const fridayPlan = JSON.parse(savedFridayPlan);
+
+        for (let i = 0; i < 24; i++) {
+            const block = document.getElementById(`friday-${i}`);
+            block.innerHTML = fridayPlan[`hour-${i}`] || 'Free Time';
+        }
+    }
+}
+
+    // Call this function to load the plan when the page is ready
+    document.addEventListener('DOMContentLoaded', loadFridayPlan);
+
+</script>
+
+
 </body>
 </html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sunday</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     
@@ -16,25 +17,90 @@
 
 
 
+
 </section>
     <div class="content">
         <p>Details for Sunday can go here.</p>
         <p> To-do list, events, tasks, etc.</p>
-</div>
+    </div>
+
+    <div class="planner" id="sunday-planner">
+        <label class="time">12 am</label>
+        <div class="hour-block" id="sunday-0"></div>
+        <label class="time">1 am</label>
+        <div class="hour-block" id="sunday-1"></div>
+        <label class="time">2 am</label>
+        <div class="hour-block" id="sunday-2"></div>
+        <label class="time">3 am</label>
+        <div class="hour-block" id="sunday-3"></div>
+        <label class="time">4 am</label>
+        <div class="hour-block" id="sunday-4"></div>
+        <label class="time">5 am</label>
+        <div class="hour-block" id="sunday-5"></div>
+        <label class="time">6 am</label>
+        <div class="hour-block" id="sunday-6"></div>
+        <label class="time">7 am</label>
+        <div class="hour-block" id="sunday-7"></div>
+        <label class="time">8 am</label>
+        <div class="hour-block" id="sunday-8"></div>
+        <label class="time">9 am</label>
+        <div class="hour-block" id="sunday-9"></div>
+        <label class="time">10 am</label>
+        <div class="hour-block" id="sunday-10"></div>
+        <label class="time">11 am</label>
+        <div class="hour-block" id="sunday-11"></div>
+        <label class="time">12 pm</label>
+        <div class="hour-block" id="sunday-12"></div>
+        <label class="time">1 pm</label>
+        <div class="hour-block" id="sunday-13"></div>
+        <label class="time">2 pm</label>
+        <div class="hour-block" id="sunday-14"></div>
+        <label class="time">3 pm</label>
+        <div class="hour-block" id="sunday-15"></div>
+        <label class="time">4 pm</label>
+        <div class="hour-block" id="sunday-16"></div>
+        <label class="time">5 pm</label>
+        <div class="hour-block" id="sunday-17"></div>
+        <label class="time">6 pm</label>
+        <div class="hour-block" id="sunday-18"></div>
+        <label class="time">7 pm</label>
+        <div class="hour-block" id="sunday-19"></div>
+        <label class="time">8 pm</label>
+        <div class="hour-block" id="sunday-20"></div>
+        <label class="time">9 pm</label>
+        <div class="hour-block" id="sunday-21"></div>
+        <label class="time">10 pm</label>
+        <div class="hour-block" id="sunday-22"></div>
+        <label class="time">11 pm</label>
+        <div class="hour-block" id="sunday-23"></div>
+      </div>
+    </div>
+    <div class="day-item"></div>
+
+<script>
+    // Simple function to load the saved Sunday plan from localStorage
+    function loadSundayPlan() {
+        const savedSundayPlan = localStorage.getItem('sundayPlan');
+        if (savedSundayPlan) {
+            const sundayPlan = JSON.parse(savedSundayPlan);
+    
+            // Loop through 24 hours and update the hour blocks
+            for (let i = 0; i < 24; i++) {
+                const block = document.getElementById(`sunday-${i}`);
+                block.innerHTML = sundayPlan[`hour-${i}`] || 'Free Time'; 
+            }
+        }
+    }
+    
+    // Call this function to load the plan when the page is ready
+    document.addEventListener('DOMContentLoaded', loadSundayPlan);
 
 
-<!-- This will dynamically update when save is pressed on index.html, it should 
- create a new form/contanier; to be added - is javascript to function 
- by utilizing localstorge and css to make this look good
- Potentially add edit button to allow specific / indepth text edits to events
+    
+
+    </script>
 
 
-<div class="planner" id="sunday-planner">
 
-</div>
-
--->
-
-    <script src="script.js"></script>
 </body>
 </html>

@@ -58,7 +58,7 @@ h1 {
 }
 
 .hour-block {
-  background-color: rgb(225, 111, 253);
+  background-color: rgb(50, 207, 255);
   border-radius: 2px;
   height: 50px;
   margin: 1px;
@@ -69,7 +69,7 @@ h1 {
 }
 
 .hour-block:hover {
-  background-color: rgb(200, 76, 231);
+  background-color: rgb(105, 72, 255);
 }
 
 .box-outer {
