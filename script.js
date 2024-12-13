@@ -76,50 +76,106 @@ function hourCheck() {
 // Prompt user for event details when clicking the planner
 sundayPlanner.addEventListener('click', (div) => {
     if(div.target.id != "sunday-planner"){
-        let event = prompt("What event would you like to add here?");
-        div.target.innerHTML = event;
+        if(div.target.innerHTML === null || div.target.innerHTML === "" || div.target.innerHTML === "Free Time") {
+            let event = prompt("What event would you like to add here?");
+            div.target.innerHTML = event;
+        } else {
+            let deletion = prompt(`Are you sure you want to delete ${div.target.innerHTML}?`, "Yes");
+            if (deletion === "Yes" || deletion === "yes" || deletion === "y"){
+                div.target.innerHTML = null;
+            }
+        }
+        saveSundayPlan();
     }
 });
 
 mondayPlanner.addEventListener('click', (div) => {
     if(div.target.id != "monday-planner"){
-        let event = prompt("What event would you like to add here?");
-        div.target.innerHTML = event;
+        if(div.target.innerHTML === null || div.target.innerHTML === "" || div.target.innerHTML === "Free Time") {
+            let event = prompt("What event would you like to add here?");
+            div.target.innerHTML = event;
+        } else {
+            let deletion = prompt(`Are you sure you want to delete ${div.target.innerHTML}?`, "Yes");
+            if (deletion === "Yes" || deletion === "yes" || deletion === "y"){
+                div.target.innerHTML = null;
+            }
+        }
+        saveMondayPlan();
     }
 });
 
 tuesdayPlanner.addEventListener('click', (div) => {
     if(div.target.id != "tuesday-planner"){
-        let event = prompt("What event would you like to add here?");
-        div.target.innerHTML = event;
+        if(div.target.innerHTML === null || div.target.innerHTML === "" || div.target.innerHTML === "Free Time") {
+            let event = prompt("What event would you like to add here?");
+            div.target.innerHTML = event;
+        } else {
+            let deletion = prompt(`Are you sure you want to delete ${div.target.innerHTML}?`, "Yes");
+            if (deletion === "Yes" || deletion === "yes" || deletion === "y"){
+                div.target.innerHTML = null;
+            }
+        }
+        saveTuesdayPlan();
     }
 });
 
 wednesdayPlanner.addEventListener('click', (div) => {
     if(div.target.id != "wednesday-planner"){
-        let event = prompt("What event would you like to add here?");
-        div.target.innerHTML = event;
+        if(div.target.innerHTML === null || div.target.innerHTML === "" || div.target.innerHTML === "Free Time") {
+            let event = prompt("What event would you like to add here?");
+            div.target.innerHTML = event;
+        } else {
+            let deletion = prompt(`Are you sure you want to delete ${div.target.innerHTML}?`, "Yes");
+            if (deletion === "Yes" || deletion === "yes" || deletion === "y"){
+                div.target.innerHTML = null;
+            }
+        }
+        saveWednesdayPlan();
     }
 });
 
 thursdayPlanner.addEventListener('click', (div) => {
     if(div.target.id != "thursday-planner"){
-        let event = prompt("What event would you like to add here?");
-        div.target.innerHTML = event;
+        if(div.target.innerHTML === null || div.target.innerHTML === "" || div.target.innerHTML === "Free Time") {
+            let event = prompt("What event would you like to add here?");
+            div.target.innerHTML = event;
+        } else {
+            let deletion = prompt(`Are you sure you want to delete ${div.target.innerHTML}?`, "Yes");
+            if (deletion === "Yes" || deletion === "yes" || deletion === "y"){
+                div.target.innerHTML = null;
+            }
+        }
+        saveThursdayPlan();
     }
 });
 
 fridayPlanner.addEventListener('click', (div) => {
     if(div.target.id != "friday-planner"){
-        let event = prompt("What event would you like to add here?");
-        div.target.innerHTML = event;
+        if(div.target.innerHTML === null || div.target.innerHTML === "" || div.target.innerHTML === "Free Time") {
+            let event = prompt("What event would you like to add here?");
+            div.target.innerHTML = event;
+        } else {
+            let deletion = prompt(`Are you sure you want to delete ${div.target.innerHTML}?`, "Yes");
+            if (deletion === "Yes" || deletion === "yes" || deletion === "y"){
+                div.target.innerHTML = null;
+            }
+        }
+        saveFridayPlan();
     }
 });
 
 saturdayPlanner.addEventListener('click', (div) => {
     if(div.target.id != "saturday-planner"){
-        let event = prompt("What event would you like to add here?");
-        div.target.innerHTML = event;
+        if(div.target.innerHTML === null || div.target.innerHTML === "" || div.target.innerHTML === "Free Time") {
+            let event = prompt("What event would you like to add here?");
+            div.target.innerHTML = event;
+        } else {
+            let deletion = prompt(`Are you sure you want to delete ${div.target.innerHTML}?`, "Yes");
+            if (deletion === "Yes" || deletion === "yes" || deletion === "y"){
+                div.target.innerHTML = null;
+            }
+        }
+        saveSaturdayPlan();
     }
 });
 
@@ -282,15 +338,173 @@ function loadSundayPlan() {
     }
 }
 
+// Function to save plan to localStorage
+function saveMondayPlan() {
+    let mondayPlan = {};
+
+    for (let i = 0; i < 24; i++) {
+        const block = document.getElementById(`monday-${i}`);
+        mondayPlan[`hour-${i}`] = block.innerHTML || '';
+    }
+    localStorage.setItem('mondayPlan', JSON.stringify(mondayPlan));
+}
+
+// Function to load plan from localStorage
+function loadMondayPlan() {
+    const savedMondayPlan = localStorage.getItem('mondayPlan');
+    if (savedMondayPlan) {
+        const mondayPlan = JSON.parse(savedMondayPlan);
+
+        for (let i = 0; i < 24; i++) {
+            const block = document.getElementById(`monday-${i}`);
+            block.innerHTML = mondayPlan[`hour-${i}`] || 'Free Time';
+        }
+    }
+}
+
+// Function to save plan to localStorage
+function saveTuesdayPlan() {
+    let tuesdayPlan = {};
+
+    for (let i = 0; i < 24; i++) {
+        const block = document.getElementById(`tuesday-${i}`);
+        tuesdayPlan[`hour-${i}`] = block.innerHTML || '';
+    }
+    localStorage.setItem('tuesdayPlan', JSON.stringify(tuesdayPlan));
+}
+
+// Function to load plan from localStorage
+function loadTuesdayPlan() {
+    const savedTuesdayPlan = localStorage.getItem('tuesdayPlan');
+    if (savedTuesdayPlan) {
+        const tuesdayPlan = JSON.parse(savedTuesdayPlan);
+
+        for (let i = 0; i < 24; i++) {
+            const block = document.getElementById(`tuesday-${i}`);
+            block.innerHTML = tuesdayPlan[`hour-${i}`] || 'Free Time';
+        }
+    }
+}
+
+// Function to save plan to localStorage
+function saveWednesdayPlan() {
+    let wednesdayPlan = {};
+
+    for (let i = 0; i < 24; i++) {
+        const block = document.getElementById(`wednesday-${i}`);
+        wednesdayPlan[`hour-${i}`] = block.innerHTML || '';
+    }
+    localStorage.setItem('wednesdayPlan', JSON.stringify(wednesdayPlan));
+}
+
+// Function to load plan from localStorage
+function loadWednesdayPlan() {
+    const savedWednesdayPlan = localStorage.getItem('wednesdayPlan');
+    if (savedWednesdayPlan) {
+        const wednesdayPlan = JSON.parse(savedWednesdayPlan);
+
+        for (let i = 0; i < 24; i++) {
+            const block = document.getElementById(`wednesday-${i}`);
+            block.innerHTML = wednesdayPlan[`hour-${i}`] || 'Free Time';
+        }
+    }
+}
+
+// Function to save plan to localStorage
+function saveThursdayPlan() {
+    let thursdayPlan = {};
+
+    for (let i = 0; i < 24; i++) {
+        const block = document.getElementById(`thursday-${i}`);
+        thursdayPlan[`hour-${i}`] = block.innerHTML || '';
+    }
+    localStorage.setItem('thursdayPlan', JSON.stringify(thursdayPlan));
+}
+
+// Function to load plan from localStorage
+function loadThursdayPlan() {
+    const savedThursdayPlan = localStorage.getItem('thursdayPlan');
+    if (savedThursdayPlan) {
+        const thursdayPlan = JSON.parse(savedThursdayPlan);
+
+        for (let i = 0; i < 24; i++) {
+            const block = document.getElementById(`thursday-${i}`);
+            block.innerHTML = thursdayPlan[`hour-${i}`] || 'Free Time';
+        }
+    }
+}
+
+// Function to save plan to localStorage
+function saveFridayPlan() {
+    let fridayPlan = {};
+
+    for (let i = 0; i < 24; i++) {
+        const block = document.getElementById(`friday-${i}`);
+        fridayPlan[`hour-${i}`] = block.innerHTML || '';
+    }
+    localStorage.setItem('fridayPlan', JSON.stringify(fridayPlan));
+}
+
+// Function to load plan from localStorage
+function loadFridayPlan() {
+    const savedFridayPlan = localStorage.getItem('fridayPlan');
+    if (savedFridayPlan) {
+        const fridayPlan = JSON.parse(savedFridayPlan);
+
+        for (let i = 0; i < 24; i++) {
+            const block = document.getElementById(`friday-${i}`);
+            block.innerHTML = fridayPlan[`hour-${i}`] || 'Free Time';
+        }
+    }
+}
+
+// Function to save plan to localStorage
+function saveSaturdayPlan() {
+    let saturdayPlan = {};
+
+    for (let i = 0; i < 24; i++) {
+        const block = document.getElementById(`saturday-${i}`);
+        saturdayPlan[`hour-${i}`] = block.innerHTML || '';
+    }
+    localStorage.setItem('saturdayPlan', JSON.stringify(saturdayPlan));
+}
+
+// Function to load plan from localStorage
+function loadSaturdayPlan() {
+    const savedSaturdayPlan = localStorage.getItem('saturdayPlan');
+    if (savedSaturdayPlan) {
+        const saturdayPlan = JSON.parse(savedSaturdayPlan);
+
+        for (let i = 0; i < 24; i++) {
+            const block = document.getElementById(`saturday-${i}`);
+            block.innerHTML = saturdayPlan[`hour-${i}`] || 'Free Time';
+        }
+    }
+}
+
 // Event listener for Save Plan button
 const savePlanButton = document.getElementById("save-plan");
 
 savePlanButton.addEventListener('click', () => {
-    saveSundayPlan();
+    let element = document.body;
+    let options = {
+        margin: 0,
+        filename: 'weeklyplanner.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { useCORS: true },
+        jsPDF: { format: 'a2' }
+    }
+    html2pdf().set(options).from(element).save();
 });
 
 // Loads plan from localStorage when page loads
 document.addEventListener('DOMContentLoaded', loadSundayPlan);
+document.addEventListener('DOMContentLoaded', loadMondayPlan);
+document.addEventListener('DOMContentLoaded', loadTuesdayPlan);
+document.addEventListener('DOMContentLoaded', loadWednesdayPlan);
+document.addEventListener('DOMContentLoaded', loadThursdayPlan);
+document.addEventListener('DOMContentLoaded', loadFridayPlan);
+document.addEventListener('DOMContentLoaded', loadSaturdayPlan);
   
 // Function to display the sign-up form
 function displaySignup() {
