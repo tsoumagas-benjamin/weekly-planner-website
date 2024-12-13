@@ -185,6 +185,13 @@ function resetWeek() {
     for (const hourBlock of hourBlocks) {
         hourBlock.innerHTML = "";
     }
+    localStorage.removeItem('sundayPlan');
+    localStorage.removeItem('mondayPlan');
+    localStorage.removeItem('tuesdayPlan');
+    localStorage.removeItem('wednesdayPlan');
+    localStorage.removeItem('thursdayPlan');
+    localStorage.removeItem('fridayPlan');
+    localStorage.removeItem('saturdayPlan');
 }
 
 weeklyReset.addEventListener('click', (button) =>{
@@ -212,6 +219,7 @@ function clearMonday() {
     for (const mondayBlock of mondayBlocks) {
         mondayBlock.innerText = "";
     }
+    localStorage.removeItem('mondayPlan');
 }
 
 mondayClear.addEventListener('click', (button) =>{
@@ -224,6 +232,7 @@ function clearTuesday() {
     for (const tuesdayBlock of tuesdayBlocks) {
         tuesdayBlock.innerHTML = "";
     }
+    localStorage.removeItem('tuesdayPlan');
 }
 
 tuesdayClear.addEventListener('click', (button) =>{
@@ -236,6 +245,7 @@ function clearWednesday() {
     for (const wednesdayBlock of wednesdayBlocks) {
         wednesdayBlock.innerHTML = "";
     }
+    localStorage.removeItem('wednesdayPlan');
 }
 
 wednesdayClear.addEventListener('click', (button) =>{
@@ -248,6 +258,7 @@ function clearThursday() {
     for (const thursdayBlock of thursdayBlocks) {
         thursdayBlock.innerHTML = "";
     }
+    localStorage.removeItem('thursdayPlan');
 }
 
 thursdayClear.addEventListener('click', (button) =>{
@@ -260,6 +271,7 @@ function clearFriday() {
     for (const fridayBlock of fridayBlocks) {
         fridayBlock.innerHTML = "";
     }
+    localStorage.removeItem('fridayPlan');
 }
 
 fridayClear.addEventListener('click', (button) =>{
@@ -272,6 +284,7 @@ function clearSaturday() {
     for (const saturdayBlock of saturdayBlocks) {
         saturdayBlock.innerHTML = "";
     }
+    localStorage.removeItem('saturdayPlan');
 }
 
 saturdayClear.addEventListener('click', (button) =>{
