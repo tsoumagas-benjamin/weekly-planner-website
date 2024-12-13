@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wednesday</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     
@@ -22,9 +23,6 @@
 
           <!-- Wednesday -->
           <div class="day-header" id="day-header">
-            <h4>Wednesday</h4>
-            <button class="day-button" id="wednesday-button" onclick="seeWednesday()">More Details</button>
-            <button class="clear" id="clear-wednesday" type="button">Clear</button>
           </div>
           <div class="planner" id="wednesday-planner">
             <label class="time">12 am</label>
@@ -79,7 +77,28 @@
         </div>
         <div class="day-item">
 
+            <script>
 
-    <script src="script.js"></script>
+                // Function to load plan from localStorage
+function loadWednesdayPlan() {
+    const savedWednesdayPlan = localStorage.getItem('wednesdayPlan');
+    if (savedWednesdayPlan) {
+        const wednesdayPlan = JSON.parse(savedWednesdayPlan);
+
+        for (let i = 0; i < 24; i++) {
+            const block = document.getElementById(`wednesday-${i}`);
+            block.innerHTML = wednesdayPlan[`hour-${i}`] || 'Free Time';
+        }
+    }
+}
+
+
+    // Call this function to load the plan when the page is ready
+    document.addEventListener('DOMContentLoaded', loadWednesdayPlan);
+
+            </script>
+
+
+
 </body>
 </html>
