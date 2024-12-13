@@ -486,7 +486,15 @@ function loadSaturdayPlan() {
 const savePlanButton = document.getElementById("save-plan");
 
 savePlanButton.addEventListener('click', () => {
-    // Add in new save plan functionality
+    let element = document.body;
+    let options = {
+        margin: 0,
+        filename: 'weeklyplanner.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { useCORS: true },
+        jsPDF: { format: 'a2' }
+    }
+    html2pdf().set(options).from(element).save();
 });
 
 // Loads plan from localStorage when page loads
