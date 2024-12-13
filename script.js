@@ -85,6 +85,7 @@ sundayPlanner.addEventListener('click', (div) => {
                 div.target.innerHTML = null;
             }
         }
+        saveSundayPlan();
     }
 });
 
@@ -99,6 +100,7 @@ mondayPlanner.addEventListener('click', (div) => {
                 div.target.innerHTML = null;
             }
         }
+        saveMondayPlan();
     }
 });
 
@@ -113,6 +115,7 @@ tuesdayPlanner.addEventListener('click', (div) => {
                 div.target.innerHTML = null;
             }
         }
+        saveTuesdayPlan();
     }
 });
 
@@ -127,6 +130,7 @@ wednesdayPlanner.addEventListener('click', (div) => {
                 div.target.innerHTML = null;
             }
         }
+        saveWednesdayPlan();
     }
 });
 
@@ -141,6 +145,7 @@ thursdayPlanner.addEventListener('click', (div) => {
                 div.target.innerHTML = null;
             }
         }
+        saveThursdayPlan();
     }
 });
 
@@ -155,6 +160,7 @@ fridayPlanner.addEventListener('click', (div) => {
                 div.target.innerHTML = null;
             }
         }
+        saveFridayPlan();
     }
 });
 
@@ -169,6 +175,7 @@ saturdayPlanner.addEventListener('click', (div) => {
                 div.target.innerHTML = null;
             }
         }
+        saveSaturdayPlan();
     }
 });
 
@@ -479,11 +486,17 @@ function loadSaturdayPlan() {
 const savePlanButton = document.getElementById("save-plan");
 
 savePlanButton.addEventListener('click', () => {
-    saveSundayPlan();
+    // Add in new save plan functionality
 });
 
 // Loads plan from localStorage when page loads
 document.addEventListener('DOMContentLoaded', loadSundayPlan);
+document.addEventListener('DOMContentLoaded', loadMondayPlan);
+document.addEventListener('DOMContentLoaded', loadTuesdayPlan);
+document.addEventListener('DOMContentLoaded', loadWednesdayPlan);
+document.addEventListener('DOMContentLoaded', loadThursdayPlan);
+document.addEventListener('DOMContentLoaded', loadFridayPlan);
+document.addEventListener('DOMContentLoaded', loadSaturdayPlan);
   
 // Function to display the sign-up form
 function displaySignup() {
