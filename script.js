@@ -331,6 +331,150 @@ function loadSundayPlan() {
     }
 }
 
+// Function to save plan to localStorage
+function saveMondayPlan() {
+    let mondayPlan = {};
+
+    for (let i = 0; i < 24; i++) {
+        const block = document.getElementById(`monday-${i}`);
+        mondayPlan[`hour-${i}`] = block.innerHTML || '';
+    }
+    localStorage.setItem('mondayPlan', JSON.stringify(mondayPlan));
+}
+
+// Function to load plan from localStorage
+function loadMondayPlan() {
+    const savedMondayPlan = localStorage.getItem('mondayPlan');
+    if (savedMondayPlan) {
+        const mondayPlan = JSON.parse(savedMondayPlan);
+
+        for (let i = 0; i < 24; i++) {
+            const block = document.getElementById(`monday-${i}`);
+            block.innerHTML = mondayPlan[`hour-${i}`] || 'Free Time';
+        }
+    }
+}
+
+// Function to save plan to localStorage
+function saveTuesdayPlan() {
+    let tuesdayPlan = {};
+
+    for (let i = 0; i < 24; i++) {
+        const block = document.getElementById(`tuesday-${i}`);
+        tuesdayPlan[`hour-${i}`] = block.innerHTML || '';
+    }
+    localStorage.setItem('tuesdayPlan', JSON.stringify(tuesdayPlan));
+}
+
+// Function to load plan from localStorage
+function loadTuesdayPlan() {
+    const savedTuesdayPlan = localStorage.getItem('tuesdayPlan');
+    if (savedTuesdayPlan) {
+        const tuesdayPlan = JSON.parse(savedTuesdayPlan);
+
+        for (let i = 0; i < 24; i++) {
+            const block = document.getElementById(`tuesday-${i}`);
+            block.innerHTML = tuesdayPlan[`hour-${i}`] || 'Free Time';
+        }
+    }
+}
+
+// Function to save plan to localStorage
+function saveWednesdayPlan() {
+    let wednesdayPlan = {};
+
+    for (let i = 0; i < 24; i++) {
+        const block = document.getElementById(`wednesday-${i}`);
+        wednesdayPlan[`hour-${i}`] = block.innerHTML || '';
+    }
+    localStorage.setItem('wednesdayPlan', JSON.stringify(wednesdayPlan));
+}
+
+// Function to load plan from localStorage
+function loadWednesdayPlan() {
+    const savedWednesdayPlan = localStorage.getItem('wednesdayPlan');
+    if (savedWednesdayPlan) {
+        const wednesdayPlan = JSON.parse(savedWednesdayPlan);
+
+        for (let i = 0; i < 24; i++) {
+            const block = document.getElementById(`wednesday-${i}`);
+            block.innerHTML = wednesdayPlan[`hour-${i}`] || 'Free Time';
+        }
+    }
+}
+
+// Function to save plan to localStorage
+function saveThursdayPlan() {
+    let thursdayPlan = {};
+
+    for (let i = 0; i < 24; i++) {
+        const block = document.getElementById(`thursday-${i}`);
+        thursdayPlan[`hour-${i}`] = block.innerHTML || '';
+    }
+    localStorage.setItem('thursdayPlan', JSON.stringify(thursdayPlan));
+}
+
+// Function to load plan from localStorage
+function loadThursdayPlan() {
+    const savedThursdayPlan = localStorage.getItem('thursdayPlan');
+    if (savedThursdayPlan) {
+        const thursdayPlan = JSON.parse(savedThursdayPlan);
+
+        for (let i = 0; i < 24; i++) {
+            const block = document.getElementById(`thursday-${i}`);
+            block.innerHTML = thursdayPlan[`hour-${i}`] || 'Free Time';
+        }
+    }
+}
+
+// Function to save plan to localStorage
+function saveFridayPlan() {
+    let fridayPlan = {};
+
+    for (let i = 0; i < 24; i++) {
+        const block = document.getElementById(`friday-${i}`);
+        fridayPlan[`hour-${i}`] = block.innerHTML || '';
+    }
+    localStorage.setItem('fridayPlan', JSON.stringify(fridayPlan));
+}
+
+// Function to load plan from localStorage
+function loadFridayPlan() {
+    const savedFridayPlan = localStorage.getItem('fridayPlan');
+    if (savedFridayPlan) {
+        const fridayPlan = JSON.parse(savedFridayPlan);
+
+        for (let i = 0; i < 24; i++) {
+            const block = document.getElementById(`friday-${i}`);
+            block.innerHTML = fridayPlan[`hour-${i}`] || 'Free Time';
+        }
+    }
+}
+
+// Function to save plan to localStorage
+function saveSaturdayPlan() {
+    let saturdayPlan = {};
+
+    for (let i = 0; i < 24; i++) {
+        const block = document.getElementById(`saturday-${i}`);
+        saturdayPlan[`hour-${i}`] = block.innerHTML || '';
+    }
+    localStorage.setItem('saturdayPlan', JSON.stringify(saturdayPlan));
+}
+
+// Function to load plan from localStorage
+function loadSaturdayPlan() {
+    const savedSaturdayPlan = localStorage.getItem('saturdayPlan');
+    if (savedSaturdayPlan) {
+        const saturdayPlan = JSON.parse(savedSaturdayPlan);
+
+        for (let i = 0; i < 24; i++) {
+            const block = document.getElementById(`saturday-${i}`);
+            block.innerHTML = saturdayPlan[`hour-${i}`] || 'Free Time';
+        }
+    }
+}
+
 // Event listener for Save Plan button
 const savePlanButton = document.getElementById("save-plan");
 
