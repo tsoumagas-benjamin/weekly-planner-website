@@ -26,7 +26,20 @@ https://tsoumagas-benjamin.github.io/weekly-planner-website/index.html
 
 ## Main Page
 
+Top of the Main Page
+![Main Page Top](https://github.com/tsoumagas-benjamin/weekly-planner-website/blob/main/screenshots/MainPage1.png?raw=true)
+
+Bottom of the Main Page
+![Main Page Bottom](https://github.com/tsoumagas-benjamin/weekly-planner-website/blob/main/screenshots/MainPage2.png?raw=true)
+
+
 ## Day Page
+
+Top of Monday's Day Page
+![Day Page Top](https://github.com/tsoumagas-benjamin/weekly-planner-website/blob/main/screenshots/DayPage1.png?raw=true)
+
+Bottom of Monday's Day Page
+![Day Page Top](https://github.com/tsoumagas-benjamin/weekly-planner-website/blob/main/screenshots/DayPage2.png?raw=true)
 
 # Feature Presentation
 
