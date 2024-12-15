@@ -10,51 +10,61 @@ https://tsoumagas-benjamin.github.io/weekly-planner-website/index.html
 
 # Various features of the website include:
 
-Weather widget
+- Weather widget
 
-Save plan which prints the screen and downloads a pdfs
+- Save plan which prints the screen and downloads a pdfs
 
-More Details button leading to individual pages
+- More Details button leading to individual pages
 
-Clear/Reset Week buttons to clear the localstorage and daily/weekly information
+- Clear/Reset Week buttons to clear the localstorage and daily/weekly information
 
-Register submission form
+- Register submission form
 
-Hour blocks which accepts and saves user inputted information, or deletes saved information.
+- Hour blocks which accepts and saves user inputted information, or deletes saved information.
 
 # Screenshots of webpage:
 
-Screenshot 1 main page:
+## Main Page
 
-Screenshot 2 individual page:
+## Day Page
 
 # Feature Presentation
 
 [![Feature Presentation](https://img.youtube.com/vi/nGnqMqO00vI/0.jpg)](https://www.youtube.com/watch?v=nGnqMqO00vI)
 
-# Steps for installation, dependencies, and instructions on running the project:
+# Steps for Installation, Dependencies, and Instructions on Running the Project:
 
 There are no dependencies for our project, you may simply clone the repo to actively use the planner.
 
-# Groups Members:
+1. Use your terminal to navigate to where you want the project.
+2. Use `git clone https://github.com/tsoumagas-benjamin/weekly-planner-website.git ` to clone the repo. 
+3. Run using a Live Server extension in VSCode or equivalent in another IDE of your choice.
+
+# Group Members:
 
 Ben Tsoumagas
 
-Role:
+Role: Team Leader
 
-Contributions:
+Contributions: Weekly planner base HTML/JS, Save planner as PDF functionality, Clear button functionality, and Adding/Removing tasks.
 
 Steven Hamm
 
 Role: Front-end / Back-end coding
 
-Contributions: Save/Load functions to localstorage, Individual days, Weather widget
+Contributions: Save/Load functions to localstorage, Individual days, and Weather widget
 
 Amber chambers
 
-Role:
+Role: Design Specialist
 
-Contributions:
+Contributions: CSS Styling and Registration Form
+
+# Issue and Project Boards
+
+- [Issue Board Link](https://github.com/tsoumagas-benjamin/weekly-planner-website/issues?q=is%3Aissue+is%3Aclosed)
+
+- [Project Board Link](https://github.com/users/tsoumagas-benjamin/projects/1)
 
 # Final Presentation
 
